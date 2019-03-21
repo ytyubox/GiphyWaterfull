@@ -29,16 +29,16 @@ struct GiphyResponse:Codable {
 extension GiphyResponse{
 
   enum Option{
-    case width
-    case height
+    case fixWidth
+    case fixHeight
   }
 
   func getURL(for opt:Option)->[URL]{
     let images = data.map{$0.images}
     var re:[String]
     switch opt {
-    case .height:     re = images.map{$0.fixed_height.url}
-    case .width:      re = images.map{$0.fixed_height.url}
+    case .fixHeight:     re = images.map{$0.fixed_height.url}
+    case .fixWidth:      re = images.map{$0.fixed_height.url}
     }
     return re.compactMap{URL(string: $0)}
   }

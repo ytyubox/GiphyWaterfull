@@ -19,6 +19,7 @@
 		AA77BD7E22436FD100B925CC /* GIFWeNeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD7D22436FD100B925CC /* GIFWeNeed.swift */; };
 		AA77BD822243713300B925CC /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD812243713300B925CC /* UIImage+Gif.swift */; };
 		AA77BD842243763500B925CC /* GIFCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD832243763500B925CC /* GIFCollectionViewCell.swift */; };
+		AA77BD872243813E00B925CC /* WaterFallDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD862243813E00B925CC /* WaterFallDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		AA77BD7D22436FD100B925CC /* GIFWeNeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFWeNeed.swift; sourceTree = "<group>"; };
 		AA77BD812243713300B925CC /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		AA77BD832243763500B925CC /* GIFCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFCollectionViewCell.swift; sourceTree = "<group>"; };
+		AA77BD862243813E00B925CC /* WaterFallDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				AA77BD75224334C200B925CC /* GIPHY */,
+				AA77BD852243810E00B925CC /* WaterFall */,
 				AA77BD55224332DE00B925CC /* AppDelegate.swift */,
 				AA77BD57224332DF00B925CC /* ViewController.swift */,
 				AA77BD59224332DF00B925CC /* Main.storyboard */,
@@ -128,6 +131,14 @@
 				AA77BD782243353200B925CC /* Result.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		AA77BD852243810E00B925CC /* WaterFall */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD862243813E00B925CC /* WaterFallDelegate.swift */,
+			);
+			path = WaterFall;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 				AA77BD842243763500B925CC /* GIFCollectionViewCell.swift in Sources */,
 				AA77BD58224332DF00B925CC /* ViewController.swift in Sources */,
 				AA77BD792243353200B925CC /* Result.swift in Sources */,
+				AA77BD872243813E00B925CC /* WaterFallDelegate.swift in Sources */,
 				AA77BD56224332DE00B925CC /* AppDelegate.swift in Sources */,
 				AA77BD7C22436D9E00B925CC /* GIGHYJSON.swift in Sources */,
 			);

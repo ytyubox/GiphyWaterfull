@@ -12,6 +12,7 @@ class ViewController: UICollectionViewController {
 
   let giphy = Giphy()
   var urls:[URL] = []
+  var cache:[IndexPath:Data] = [:]
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,7 +30,7 @@ class ViewController: UICollectionViewController {
       case .results(let data):
 //        print(data.prettyPrintedJSONString ?? "error")
         guard let res = GiphyResponse(from: data) else {return}
-        self.urls = res.getURL(for: .height)
+        self.urls = res.getURL(for: .fixWidth)
         DispatchQueue.main.async {self.collectionView.reloadData()}
       }
     }
@@ -44,9 +45,18 @@ extension ViewController{
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! GIFCollectionViewCell
     cell.backgroundColor = .red
     let url = urls[indexPath.item]
-    DispatchQueue.global().async {
-      guard let data = try? Data(contentsOf: url) else {fatalError("error load GIF")}
+    if let olddata =  cache[indexPath]{
+      cell.imageView.loadGIF(data: olddata)
+    }
+    else{
+    DispatchQueue.global().async { [weak self] in
+
+      guard
+        let self = self,
+        let data = try? Data(contentsOf: url) else {fatalError("error load GIF")}
+      self.cache[indexPath] = data
       cell.imageView.loadGIF(data: data)
+    }
     }
     return cell
   }
