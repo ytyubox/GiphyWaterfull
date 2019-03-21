@@ -15,6 +15,7 @@
 		AA77BD6B224332E200B925CC /* YuPracticeGIFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6A224332E200B925CC /* YuPracticeGIFTests.swift */; };
 		AA77BD77224334E100B925CC /* GIPHYRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD76224334E100B925CC /* GIPHYRequest.swift */; };
 		AA77BD792243353200B925CC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD782243353200B925CC /* Result.swift */; };
+		AA77BD7C22436D9E00B925CC /* GIGHYJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD7B22436D9E00B925CC /* GIGHYJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		AA77BD6C224332E200B925CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA77BD76224334E100B925CC /* GIPHYRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIPHYRequest.swift; sourceTree = "<group>"; };
 		AA77BD782243353200B925CC /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		AA77BD7B22436D9E00B925CC /* GIGHYJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIGHYJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				AA77BD76224334E100B925CC /* GIPHYRequest.swift */,
+				AA77BD7B22436D9E00B925CC /* GIGHYJSON.swift */,
 			);
 			path = GIPHY;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				AA77BD58224332DF00B925CC /* ViewController.swift in Sources */,
 				AA77BD792243353200B925CC /* Result.swift in Sources */,
 				AA77BD56224332DE00B925CC /* AppDelegate.swift in Sources */,
+				AA77BD7C22436D9E00B925CC /* GIGHYJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

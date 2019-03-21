@@ -23,67 +23,12 @@ class ViewController: UICollectionViewController {
       case .error(let error):
         print("Error loading:" + error.localizedDescription)
       case .results(let data):
-        print(data.prettyPrintedJSONString ?? "error")
-        let res = GiphyResponse(from: data)
-
+//        print(data.prettyPrintedJSONString ?? "error")
+        guard let res = GiphyResponse(from: data) else {return}
+        print(res.getURL(for: .height))
       }
     }
   }
 
 
-}
-enum Option{
-  case width
-  case height
-}
-
-struct GiphyResponse:Codable {
-  var meta:Meta
-  var data:[GiphyData]
-  var pagination:Pagination
-
-
-  init?(from data:Data) {
-    var new :GiphyResponse
-    do {
-        new = try JSONDecoder().decode(GiphyResponse.self, from: data)
-    }catch{
-      fatalError(error.localizedDescription)
-      return nil
-    }
-    self = new
-
-  }
-}
-struct GiphyData:Codable {
-//  var fixed_height:Fixed_height
-//  var fixed_width:Fixed_width
-
-  var images:Image
-  var is_sticker:Int
-}
-  struct ImageDetail:Codable {
-    var url:String
-  }
-  struct Fixed_width:Codable {
-    var url:String
-  }
-struct Meta:Codable {
-  var status:Int
-  var msg:String
-  var response_id:String
-}
-
-struct Pagination:Codable {
-  ///  Position in pagination.
- var  offset: Int
-  ///  Total number of items available.
- var  total_count: Int
-  ///  Total number of items returned.
- var  count: Int
-}
-
-struct Image:Codable {
-  var fixed_height:ImageDetail
-  var fixed_width:ImageDetail
 }
