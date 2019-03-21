@@ -56,3 +56,14 @@ extension Giphy{
     case generic
   }
 }
+
+
+
+extension String{
+  var searchURL:URL?{
+    guard let secapedTerm = self.addingPercentEncoding(withAllowedCharacters: .alphanumerics) else {return nil}
+    let URLString = HOST + Path.search.rawValue + "q=" + secapedTerm + "&api_key=" + APIKEY
+    return URL(string: URLString)
+  }
+
+}

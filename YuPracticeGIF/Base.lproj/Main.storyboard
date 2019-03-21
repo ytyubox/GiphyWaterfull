@@ -16,21 +16,36 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="J7p-qb-dom">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ttn-iy-M9k">
-                            <size key="itemSize" width="95" height="105"/>
+                            <size key="itemSize" width="139" height="111"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="t3L-yZ-Kos">
-                                <rect key="frame" x="0.0" y="0.0" width="95" height="105"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="t3L-yZ-Kos" customClass="GIFCollectionViewCell" customModule="YuPracticeGIF" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="139" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="95" height="105"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="139" height="111"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yQi-4a-tT9">
+                                            <rect key="frame" x="0.0" y="0.0" width="139" height="111"/>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yQi-4a-tT9" secondAttribute="bottom" id="Khn-e9-tFH"/>
+                                    <constraint firstItem="yQi-4a-tT9" firstAttribute="leading" secondItem="t3L-yZ-Kos" secondAttribute="leading" id="UrF-R6-MUo"/>
+                                    <constraint firstItem="yQi-4a-tT9" firstAttribute="top" secondItem="t3L-yZ-Kos" secondAttribute="top" id="e97-oC-ANj"/>
+                                    <constraint firstAttribute="trailing" secondItem="yQi-4a-tT9" secondAttribute="trailing" id="m8G-xH-fhf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="yQi-4a-tT9" id="9lU-lc-vRb"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

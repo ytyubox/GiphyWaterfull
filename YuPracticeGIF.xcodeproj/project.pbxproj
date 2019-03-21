@@ -18,6 +18,7 @@
 		AA77BD7C22436D9E00B925CC /* GIGHYJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD7B22436D9E00B925CC /* GIGHYJSON.swift */; };
 		AA77BD7E22436FD100B925CC /* GIFWeNeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD7D22436FD100B925CC /* GIFWeNeed.swift */; };
 		AA77BD822243713300B925CC /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD812243713300B925CC /* UIImage+Gif.swift */; };
+		AA77BD842243763500B925CC /* GIFCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD832243763500B925CC /* GIFCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		AA77BD7B22436D9E00B925CC /* GIGHYJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIGHYJSON.swift; sourceTree = "<group>"; };
 		AA77BD7D22436FD100B925CC /* GIFWeNeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFWeNeed.swift; sourceTree = "<group>"; };
 		AA77BD812243713300B925CC /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		AA77BD832243763500B925CC /* GIFCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				AA77BD55224332DE00B925CC /* AppDelegate.swift */,
 				AA77BD57224332DF00B925CC /* ViewController.swift */,
 				AA77BD59224332DF00B925CC /* Main.storyboard */,
+				AA77BD832243763500B925CC /* GIFCollectionViewCell.swift */,
 				AA77BD5C224332E200B925CC /* Assets.xcassets */,
 				AA77BD5E224332E200B925CC /* LaunchScreen.storyboard */,
 				AA77BD61224332E200B925CC /* Info.plist */,
@@ -231,6 +234,7 @@
 				AA77BD7E22436FD100B925CC /* GIFWeNeed.swift in Sources */,
 				AA77BD77224334E100B925CC /* GIPHYRequest.swift in Sources */,
 				AA77BD822243713300B925CC /* UIImage+Gif.swift in Sources */,
+				AA77BD842243763500B925CC /* GIFCollectionViewCell.swift in Sources */,
 				AA77BD58224332DF00B925CC /* ViewController.swift in Sources */,
 				AA77BD792243353200B925CC /* Result.swift in Sources */,
 				AA77BD56224332DE00B925CC /* AppDelegate.swift in Sources */,
