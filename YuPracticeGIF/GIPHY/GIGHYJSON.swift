@@ -42,6 +42,15 @@ extension GiphyResponse{
     }
     return re.compactMap{URL(string: $0)}
   }
+  func getleng(for opt:Option) -> [Int?] {
+    let images = data.map{$0.images}
+    var re:[String]
+    switch opt{
+    case .fixHeight: re = images.map{$0.fixed_height.width}
+    case .fixWidth: re = images.map{$0.fixed_width.height}
+    }
+    return re.map{Int($0)}
+  }
 }
 
 extension GiphyResponse{
@@ -53,10 +62,24 @@ extension GiphyResponse{
     var is_sticker:Int
   }
   struct ImageDetail:Codable {
-    var url:String
-  }
-  struct Fixed_width:Codable {
-    var url:String
+
+    ///The publicly-accessible direct URL for this GIF.  ex.  "https://media1.giphy.com/media/cZ7rmKfFYOvYI/200w.gif"
+    var    url: String
+    ///The width of this GIF in pixels.   ex.   "320"
+    var    width: String
+    ///The height of this GIF in pixels.    ex.  "200"
+    var    height: String
+    ///The size of this GIF in bytes.  ex.    "32381"
+    var    size: String
+    ///The URL for this GIF in .MP4 format.  ex.    "https://media1.giphy.com/media/cZ7rmKfFYOvYI/200w.mp4"
+    var    mp4: String
+    ///The size in bytes of the .MP4 file corresponding to this GIF.  ex.    "25123"
+    var    mp4_size: String
+    ///The URL for this GIF in .webp format.   ex.   "https://media1.giphy.com/media/cZ7rmKfFYOvYI/200w.webp"
+    var    webp: String
+    /////    The size in bytes of the .webp file corresponding to this GIF.  ex.    "12321"
+    var    webp_size: String
+
   }
   struct Meta:Codable {
     var status:Int
@@ -76,5 +99,6 @@ extension GiphyResponse{
   struct Image:Codable {
     var fixed_height:ImageDetail
     var fixed_width:ImageDetail
+    
   }
 }
