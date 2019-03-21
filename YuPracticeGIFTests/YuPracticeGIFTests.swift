@@ -32,3 +32,18 @@ class YuPracticeGIFTests: XCTestCase {
     }
 
 }
+
+extension YuPracticeGIFTests{
+  func testAPI(){
+    let giphy = Giphy()
+    giphy.loadGiphyTread { (result) in
+      switch result{
+      case .results(let data):
+        let new = GiphyResponse.init(from: data)
+        assert(new != nil, "Json error")
+      default:
+        break
+}
+    }
+  }
+}

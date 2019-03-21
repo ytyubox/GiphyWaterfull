@@ -13,6 +13,8 @@
 		AA77BD5D224332E200B925CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA77BD5C224332E200B925CC /* Assets.xcassets */; };
 		AA77BD60224332E200B925CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA77BD5E224332E200B925CC /* LaunchScreen.storyboard */; };
 		AA77BD6B224332E200B925CC /* YuPracticeGIFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD6A224332E200B925CC /* YuPracticeGIFTests.swift */; };
+		AA77BD77224334E100B925CC /* GIPHYRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD76224334E100B925CC /* GIPHYRequest.swift */; };
+		AA77BD792243353200B925CC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA77BD782243353200B925CC /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		AA77BD66224332E200B925CC /* YuPracticeGIFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YuPracticeGIFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA77BD6A224332E200B925CC /* YuPracticeGIFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuPracticeGIFTests.swift; sourceTree = "<group>"; };
 		AA77BD6C224332E200B925CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA77BD76224334E100B925CC /* GIPHYRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIPHYRequest.swift; sourceTree = "<group>"; };
+		AA77BD782243353200B925CC /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,14 @@
 		AA77BD54224332DE00B925CC /* YuPracticeGIF */ = {
 			isa = PBXGroup;
 			children = (
+				AA77BD75224334C200B925CC /* GIPHY */,
 				AA77BD55224332DE00B925CC /* AppDelegate.swift */,
 				AA77BD57224332DF00B925CC /* ViewController.swift */,
 				AA77BD59224332DF00B925CC /* Main.storyboard */,
 				AA77BD5C224332E200B925CC /* Assets.xcassets */,
 				AA77BD5E224332E200B925CC /* LaunchScreen.storyboard */,
 				AA77BD61224332E200B925CC /* Info.plist */,
+				AA77BD7A2243353600B925CC /* extension */,
 			);
 			path = YuPracticeGIF;
 			sourceTree = "<group>";
@@ -94,6 +100,22 @@
 				AA77BD6C224332E200B925CC /* Info.plist */,
 			);
 			path = YuPracticeGIFTests;
+			sourceTree = "<group>";
+		};
+		AA77BD75224334C200B925CC /* GIPHY */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD76224334E100B925CC /* GIPHYRequest.swift */,
+			);
+			path = GIPHY;
+			sourceTree = "<group>";
+		};
+		AA77BD7A2243353600B925CC /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				AA77BD782243353200B925CC /* Result.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA77BD77224334E100B925CC /* GIPHYRequest.swift in Sources */,
 				AA77BD58224332DF00B925CC /* ViewController.swift in Sources */,
+				AA77BD792243353200B925CC /* Result.swift in Sources */,
 				AA77BD56224332DE00B925CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
