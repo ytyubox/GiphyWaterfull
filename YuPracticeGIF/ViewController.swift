@@ -29,6 +29,4 @@ class ViewController: UICollectionViewController {
       }
     }
   }
-
-
 }
